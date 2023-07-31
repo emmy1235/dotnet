@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: kiran 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: kiran
+  template:
+    metadata:
+      labels:
+        app: kiran 
+    spec:
+      containers:
+        - name: kiran 
+          image: projectk.azurecr.io/kiran
+          ports:
+          - containerPort: 5000
